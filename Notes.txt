@@ -1,0 +1,11 @@
+instalar nodejs
+instalar angular
+    npm install -g @angular/cli
+Criar novo projeto
+    ng new projectName
+
+Web component (unidade minima de software)
+    HTML (Template)
+    JS (Comportamento)
+    CSS (Estilo)
+    Dados (estatico / dinamico)
