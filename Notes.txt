@@ -9,3 +9,15 @@ Web component (unidade minima de software)
     JS (Comportamento)
     CSS (Estilo)
     Dados (estatico / dinamico)
+
+Emmet Abbreviation
+	Escritor de html
+
+NG add
+    Adicionar pacotes
+
+O que eh xhr?
+
+Alto complete no vscode
+
+ngFor sao diretiva, sao funcoes que podem ser executadas dentro dos templates
