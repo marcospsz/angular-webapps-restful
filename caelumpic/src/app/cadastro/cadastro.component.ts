@@ -1,3 +1,4 @@
+import { Foto } from './../foto/foto';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
+  foto = new Foto();
+
   constructor() { }
 
   ngOnInit() {
@@ -14,7 +17,7 @@ export class CadastroComponent implements OnInit {
 
   salvar(){
 
-    console.log('Clicou')
+    console.log(this.foto)
   }
 
 }
