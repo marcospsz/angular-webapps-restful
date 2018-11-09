@@ -5,6 +5,7 @@ import {Routes, RouterModule} from "@angular/router";
 const rotasApp: Routes = [
   {path: '', component: ListagemComponent},
   {path: 'cadastro', component: CadastroComponent},
+  {path: 'editar/:fotoId', component: CadastroComponent},
   {path: '**', redirectTo: ''}
 ]
 

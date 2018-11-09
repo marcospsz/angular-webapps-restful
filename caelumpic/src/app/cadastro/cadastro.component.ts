@@ -1,23 +1,33 @@
-import { Foto } from './../foto/foto';
-import { Component, OnInit } from '@angular/core';
+import { FotoService } from "./../servicos/foto.service";
+import { Foto } from "./../foto/foto";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'caleumpic-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: "caleumpic-cadastro",
+  templateUrl: "./cadastro.component.html",
+  styleUrls: ["./cadastro.component.css"]
 })
 export class CadastroComponent implements OnInit {
-
   foto = new Foto();
 
-  constructor() { }
+  constructor(private fotoService: FotoService,
+              private roteador: Router) {
 
-  ngOnInit() {
   }
 
   salvar(){
-
-    console.log(this.foto)
+    this
+      .fotoService
+      .cadastrar(this.foto)
+      .subscribe(
+        () => {
+          this.roteador.navigate([''])
+        },
+        erro => console.log(erro),
+        () => console.log('Completou')
+      )
   }
 
+  ngOnInit() {}
 }
