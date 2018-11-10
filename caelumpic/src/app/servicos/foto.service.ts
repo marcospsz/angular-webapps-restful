@@ -19,10 +19,23 @@ export class FotoService{
             .conexaoApi
             .post(this.url, foto)
   }
-  editar(){}
+
   deletar(foto: Foto): Observable<Object>{
-    return this.conexaoApi.delete(this.url+foto._id)
+    return this
+            .conexaoApi
+            .delete(this.url+foto._id)
   }
-  buscar(){}
+
+  buscar(fotoId: string): Observable <Foto>{
+    return this
+            .conexaoApi
+            .get<Foto>(this.url+fotoId)
+  }
+
+  editar(foto: Foto){
+    return this
+            .conexaoApi.put(this.url+foto._id, foto)
+  }
+
 
 }
